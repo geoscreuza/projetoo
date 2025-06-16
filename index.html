@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="">Disciplinas</a>
+
+                <div class="dropdown-menu">
+                    <a href="#" onclick="mudarDisciplina('Matemática')">Matemática</a>
+                    <a href="#" onclick="mudarDisciplina('Física')">Física</a>
+                    <a href="#" onclick="mudarDisciplina('Química')">Química</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" onclick="mostrarConteudo('atividades')">Atividades</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" onclick="mostrarConteudo('provas')">Provas</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" onclick="mostrarConteudo('projetos')">Projetos</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1>Portfólio</h1>
+        <h2 id="disciplina">Disciplinas</h2>
+        <div id="conteudo"><p>Bem-vindo ao menu de disciplinas.</p></div>
+      </div>
+      
+      <script>
+      function mudarDisciplina(nome) {
+        document.getElementById("disciplina").innerText = nome;
+        document.getElementById("conteudo").innerHTML = `<p>Bem-vindo à disciplina de ${nome}.</p>`;
+    }
+
+    function mostrarConteudo(tipo) {
+        let conteudo = document.getElementById("conteudo");
+        if (tipo === "atividades") {
+            conteudo.innerHTML = "<p>Aqui estão as atividades.</p>";
+        } else if (tipo === "provas") {
+            conteudo.innerHTML = "<p>Aqui estão as provas.</p>";
+        } else if (tipo === "projetos") {
+            conteudo.innerHTML = "<p>Aqui estão os projetos.</p>";
+        }
+    }
+
+    function toggleMenu() {
+        let menu = document.getElementById("menuDisciplinas");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+</script>
+<footer>
+    <p>Site feito por Geovana Campos, Giovanna Vieira e Rebeca Mendes.</p>
+</footer>
+</body>
+</html>
