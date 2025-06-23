@@ -4,11 +4,50 @@
     box-sizing: border-box;
 }
 
+
+
+
+
+nav li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 1.05rem 1.5rem;
+    color: var(--roxo-claro);
+}
+
+nav li a:hover{
+    background-color: white;
+}
+
+.dropdown-menu{
+    position: absolute;
+    box-shadow: 0 0 2px black;
+    display: none;
+    
+}
+
+.dropdown-menu a{
+    display: block;
+    color: black;
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
 :root{
     --preto: #000000;
-    --marinho: #493D9E;
-    --roxo-claro:#B2A5FF;
-    --cinza: darkgrey;
+    --marinho: #333;
+    --amarelo-claro:white;
+    --roxo-claro:#000000;
+    --verde: black;
+    --azul-claro: darkgrey;
     --branco: #FFFFFF;
     --marron-claro: #FAF1E6;
 }
@@ -16,8 +55,8 @@
 body {
     height: 100vh;
     box-sizing: border-box;
-    background-color: var(--cinza);
-    color: var(--preto);
+    background-color: var(--azul-claro);
+    color: var(--amarelo-claro);
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -72,7 +111,7 @@ header {
 }
 
 .lista-vertical a:hover {
-    background-color: var(--preto);
+    background-color: var(--amarelo-claro);
 }
 
 #menu-toggle:checked~.lista-vertical {
@@ -80,7 +119,7 @@ header {
 }
 
 #menu-toggle:checked+.botao-disciplinas {
-    background-color: var(--preto);
+    background-color: var(--amarelo-claro);
 }
 
 .links-principais {
@@ -101,7 +140,8 @@ header {
 
 .lista-horizontal a {
     text-decoration: none;
-    color: var(--preto);
+    color: var(--amarelo-claro);
+     display: inline-block;
 }
 
 .lista-horizontal a:hover {
