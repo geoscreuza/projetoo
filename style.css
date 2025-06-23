@@ -82,9 +82,8 @@ footer {
 :root{
     --preto: #000000;
     --marinho: #493D9E;
-    --amarelo-claro:#FFF2AF;
     --roxo-claro:#B2A5FF;
-    --verde: #99BC85;
+    --cinza: darkgrey;
     --azul-claro: #E4EFE7;
     --branco: #FFFFFF;
     --marron-claro: #FAF1E6;
@@ -109,7 +108,7 @@ header {
 
 .portfolio h1{
     font-size: 4rem;
-    color: var(--amarelo-claro);
+    color: var(--preto);
 }
 main {
     margin: 40px auto;
@@ -144,7 +143,7 @@ main {
 }
 
 .disciplina a {
-    color: var(--verde);
+    color: var(--cinza);
     font-size: 5rem;
     text-decoration: none;
 }
